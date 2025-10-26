@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Växjö Doula | Stöd under graviditet, förlossning och postpartum</title>
+    <meta name="description" content="Doula från Växjö som utför uppdrag i Kronobers län, Blekinge län och Kalmar län. Utbildad beteendevetare, med huvudämne pyskologi. Brinner för feministiska frågor och förlossningsvården. En doula är ett icke-medicinskt stöd innan, under och efter förlossningen. Som doula vill jag vara ett stöd för kvinnor som är mitt uppe i karrären, kvinnor som har eller inte har fött barn tidigare och kvinnor som tillsammans med partner önskar ha med ett stöd på sin/er förlossningsresa.">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for minimalist icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Custom styles to integrate the chosen fonts */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FDFBF8; /* A very light, warm off-white */
+            color: #4A4A4A; /* Soft dark gray for text */
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', serif;
+            color: #5C5552; /* A warmer, brownish-gray for headings */
+        }
+        .logo {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+        .bg-primary { background-color: #FDFBF8; }
+        .bg-secondary { background-color: #F4E9E2; } /* Soft, dusty rose */
+        .bg-accent { background-color: #D3C4B5; } /* Earthy beige/tan */
+        .text-primary-dark { color: #5C5552; }
+        .bg-primary-dark { background-color: #5C5552; } /* A warmer, brownish-gray for the footer */
+        .btn-primary {
+            background-color: #A49383; /* A muted, sophisticated tan */
+            color: #FFFFFF;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #8C7A6B; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body class="bg-primary">
+
+    <!-- Header & Navigation -->
+    <header class="bg-primary/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-primary-dark tracking-wider logo">VäxjöDoula</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary-dark transition">Tjänster</a>
+                <a href="#about" class="text-gray-700 hover:text-primary-dark transition">Om Mig</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary-dark transition">Kontakt</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary pb-4">
+            <a href="#services" class="block text-center py-2 px-4 text-gray-700 hover:bg-secondary">Tjänster</a>
+            <a href="#about" class="block text-center py-2 px-4 text-gray-700 hover:bg-secondary">Om Mig</a>
+            <a href="#contact" class="block text-center py-2 px-4 text-gray-700 hover:bg-secondary">Kontakt</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-20 bg-secondary">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-primary-dark leading-tight">Stöd, kunskap & trygghet</h1>
+                    <p class="mt-4 text-lg text-gray-700">Förlossningförberedande stöd i Växjö med omnejd</p>
+                    <a href="#contact" class="mt-8 inline-block btn-primary font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition">
+                        Boka ett kostnadsfritt första möte
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="doula2.png" alt="Gravid kvinna i vit klänning som håller om sin mage" class="rounded-lg shadow-2xl mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-2">Mina Tjänster</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">Jag erbjuder olika former av stöd för att du ska känna dig trygg, informerad och stärkt.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+                    
+                    <!-- Service Card 1: Doulapaket -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col">
+                        <div class="flex items-center gap-4 mb-6">
+                            <i data-feather="heart" class="w-8 h-8 text-[#A49383] flex-shrink-0"></i>
+                            <h3 class="text-xl sm:text-2xl font-bold text-primary-dark">Doulapaket</h3>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-4">Vad ingår?</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 flex-grow">
+                            <li>Två förberedande samtal ca 1,5 timme var</li>
+                            <li>Jour en vecka innan beräknad födsel och två veckor efter</li>
+                            <li>Back-up doula</li>
+                            <li>Ett eftersamtal på ca 1,5 timme</li>
+                            <li>Möjligheten att kontakta mig per telefon eller mail under hela förloppet</li>
+                        </ul>
+                        <p class="pt-4 mt-auto border-t border-gray-200 text-sm text-gray-600">
+                            Som doula har jag inget medicinskt ansvar, men är specialist på att vara ett stöd och en bro mellan de blivande föräldrarna och förlossningsvården.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2: Förlossningsförberedande -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col">
+                         <div class="flex items-center gap-4 mb-6">
+                            <i data-feather="book-open" class="w-8 h-8 text-[#A49383] flex-shrink-0"></i>
+                            <h3 class="text-xl sm:text-2xl font-bold text-primary-dark">Förlossningsförberedande</h3>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-4">Vad ingår?</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 flex-grow">
+                            <li>Församtal 30 min</li>
+                            <li>Två förberedande samtal ca 1,5 timme var</li>
+                            <li>Förlossningsförberedelse med stöd av Föda utan rädsla</li>
+                            <li>Samtal om förlossningsbrev/önskemål</li>
+                            <li>Övningar & knep inför förlossningen</li>
+                            <li>Amningsförberedelse vid behov</li>
+                            <li>Friskvårdsbidrag kan nyttjas</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-secondary">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="bild.jpg" alt="Porträttbild på Cassandra" class="rounded-full shadow-xl mx-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-4xl font-bold mb-4">Hej!</h2>
+                    <p class="text-lg mb-4 text-gray-700">Jag heter Cassandra och är utbildad doula via Anna Tallwe (DinGravidcoach) och Emma Philipsson (Förlossningspodden) juni 2022. En doula är ett icke-medicinskt stöd innan, under och efter förlossningen. Som doula vill jag vara ett stöd för kvinnor som är mitt uppe i karrären, kvinnor som har eller inte har fött barn tidigare och kvinnor som tillsammans med partner önskar ha med ett stöd på sin/er förlossningsresa.</p>
+                    <p class="text-lg mb-4 text-gray-700">Jag stödjer den gravida och partner innan, under och efter förlossningen. Jag tar uppdrag i Växjö med omnejd; Förlossningen i Växjö, Värnamo, Karlskrona och Kalmar. Kontakta mig gärna för att boka en kostnadsfri konsultation där jag kan berätta mer.</p>
+                    <p class="text-gray-600">Jag är utbildad beteendevetare, med huvudämne pyskologi. Förutom att doula arbetar jag på en statlig myndighet till vardags. Jag brinner för feministiska frågor och förlossningsvården. Du kan läsa mer om vikten av att ha med en doula på förlossningen på <a href="https://www.1177.se/Kronoberg/barn--gravid/forlossning/forberedelser-infor-forlossningen/forlossningsradsla/" class="underline hover:text-primary-dark" target="_blank">1177.se</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" class="py-20 bg-accent">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white mb-4">Redo att ta nästa steg?</h2>
+                <p class="text-lg text-white mb-8 max-w-2xl mx-auto">Jag erbjuder alltid ett kostnadsfritt och förutsättningslöst första möte där vi kan lära känna varandra och ni kan ställa alla era frågor. Hör av er så bokar vi en tid!</p>
+                 <a href="mailto:cassandra@vaxjodoula.se" class="inline-block bg-white text-primary-dark font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition mb-4 sm:mb-0 sm:mr-4">
+                    Mejla mig: cassandra@vaxjodoula.se
+                </a>
+                <a href="https://www.instagram.com/vaxjodoula/" target="_blank" class="inline-block bg-white text-primary-dark font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition">
+                    Instagram: vaxjodoula
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Växjö Doula - Alla rättigheter förbehållna.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.instagram.com/vaxjodoula/" target="_blank" aria-label="Instagram" class="hover:text-secondary transition"><i data-feather="instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Feather Icons initialization
+        feather.replace();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for(let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                 mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
+
