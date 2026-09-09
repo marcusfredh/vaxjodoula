@@ -21,8 +21,15 @@
       });
       if (!r.ok) throw new Error('bad status');
       f.reset();
-      status.textContent = 'Tack! Ditt meddelande är skickat. Jag hör av mig snart.';
-      status.className = 'form-status ok';
+      var success = document.getElementById('form-success');
+      if (success) {
+        f.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        status.textContent = 'Tack! Ditt meddelande är skickat. Jag hör av mig snart.';
+        status.className = 'form-status ok';
+      }
     } catch (err) {
       status.textContent =
         'Något gick fel. Mejla mig gärna direkt på cassandra@vaxjodoula.se.';
