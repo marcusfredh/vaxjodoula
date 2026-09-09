@@ -50,7 +50,7 @@ module.exports = async (req, res) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Växjö Doula <noreply@vaxjodoula.se>',
+        from: 'Växjö Doula <noreply@contact.vaxjodoula.se>',
         to: ['cassandra@vaxjodoula.se'],
         reply_to: email, // Cassandra kan svara direkt till besökaren
         subject: `Ny kontaktförfrågan från ${name}`,
@@ -66,7 +66,7 @@ module.exports = async (req, res) => {
     if (!r.ok) {
       const detail = await r.text();
       console.error('Resend-fel', r.status, detail);
-      return res.status(502).json({ error: 'Kunde inte skicka meddelandet.' });
+      return res.status(502).json({ error: 'Kunde inte skicka meddelandet.', upstreamStatus: r.status, upstreamDetail: detail });
     }
 
     return res.status(200).json({ ok: true });
