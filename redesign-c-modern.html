@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Växjö Doula | Stöd under graviditet, förlossning och postpartum</title>
+<meta name="description" content="Doula från Växjö som utför uppdrag i Kronobergs län, Blekinge län och Kalmar län.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bone:#F0EDE6; --bone-2:#E5E0D6; --forest:#1D2A24; --forest-2:#243229;
+  --moss:#5B6B58; --moss-dk:#4A5847; --muted:#5E5A52; --line:rgba(29,42,36,.16);
+  --pad:clamp(1.25rem,4vw,3.5rem);
+  --sans:"Instrument Sans",system-ui,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--forest);font-family:var(--sans);
+  font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1280px;margin-inline:auto;padding-inline:var(--pad)}
+.tag{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--moss);margin:0}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.025em;line-height:1.05}
+
+/* ---- header ---- */
+header{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bone) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:66px;gap:1rem}
+.mark{text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase}
+nav{display:flex;gap:2rem;margin-left:auto;margin-right:1.75rem}
+nav a{text-decoration:none;font-size:.9rem;color:var(--muted)}
+nav a:hover{color:var(--forest)}
+.btn{display:inline-block;background:var(--forest);color:var(--bone);text-decoration:none;
+  padding:.7rem 1.25rem;border-radius:4px;font-size:.88rem;font-weight:500;transition:background .25s}
+.btn:hover{background:var(--forest-2)}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:var(--forest);margin:5px 0}
+#m-nav{display:none;border-top:1px solid var(--line);padding:.5rem var(--pad) 1.25rem}
+#m-nav a{display:block;padding:.65rem 0;text-decoration:none;font-size:1.15rem;border-bottom:1px solid var(--line)}
+
+/* ---- hero ---- */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4vw,4rem);
+  align-items:center;padding-block:clamp(3rem,7vw,6.5rem)}
+h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+h1 span{font-family:var(--serif);font-style:italic;font-weight:300;letter-spacing:-.01em}
+.hero p.lead{color:var(--muted);font-size:1.08rem;margin:1.5rem 0 2.25rem;max-width:42ch}
+.hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center}
+.btn-ghost{background:transparent;color:var(--forest);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--bone-2)}
+.hero-media{position:relative}
+.hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:58% 18%;border-radius:6px}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);margin-top:2.75rem}
+.meta div{padding:1.1rem 1.25rem 1.1rem 0;border-right:1px solid var(--line)}
+.meta div:last-child{border-right:0;padding-right:0}
+.meta strong{display:block;font-weight:500;font-size:.95rem}
+.meta span{font-size:.8rem;color:var(--muted)}
+
+/* ---- services (kortlayout fran B, i C:s palett) ---- */
+.services{background:var(--bone-2);padding-block:clamp(3.5rem,7vw,6rem)}
+.center{text-align:center;max-width:52ch;margin-inline:auto}
+.services h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+.services .tag{color:var(--moss-dk);margin-bottom:.9rem}
+.center p{color:var(--muted);margin:1rem auto 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.5rem;margin-top:clamp(2.5rem,5vw,3.5rem)}
+.card{background:var(--bone);border:1px solid var(--line);border-radius:16px;
+  padding:clamp(1.75rem,3vw,2.5rem);display:flex;flex-direction:column}
+.card h3{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:.25rem}
+.card .tag{margin:1.6rem 0 .75rem}
+ul{list-style:none;margin:0;padding:0;flex:1}
+.card li{display:flex;gap:.85rem;padding:.55rem 0;font-size:.95rem}
+.card li svg{flex:none;margin-top:.42rem;color:var(--moss-dk)}
+.note{margin:1.5rem 0 0;padding-top:1.25rem;border-top:1px solid var(--line);
+  font-size:.88rem;color:var(--muted)}
+
+/* ---- about ---- */
+.about{padding-block:clamp(3.5rem,7vw,6rem)}
+.about-grid{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,300px);gap:clamp(1.5rem,3vw,3rem);align-items:start}
+.about h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:1.5rem}
+.about p{margin:0 0 1.15rem;max-width:60ch}
+.about .small{font-size:.92rem;color:var(--muted)}
+.about a{color:var(--moss);text-underline-offset:3px}
+.about-media img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 28%;border-radius:6px}
+.pull{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.35rem;line-height:1.35;
+  color:var(--forest);border-left:2px solid var(--moss);padding-left:1.1rem;margin:0 0 2rem}
+
+/* ---- contact ---- */
+.contact{background:var(--bone-2);padding-block:clamp(3.5rem,7vw,6rem)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+.contact h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+.contact p{color:var(--muted);margin:1.25rem 0 0;max-width:46ch}
+.contact-links a{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.15rem 1.25rem;background:var(--bone);border:1px solid var(--line);border-radius:6px;
+  text-decoration:none;margin-bottom:.75rem;font-size:.98rem;transition:border-color .25s,transform .25s}
+.contact-links a:hover{border-color:var(--forest);transform:translateX(4px)}
+.contact-links small{display:block;color:var(--muted);font-size:.78rem;margin-bottom:.15rem}
+footer{background:var(--forest);color:rgba(240,237,230,.6);font-size:.85rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:2.25rem;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--bone)}
+
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .about-media{max-width:340px}
+}
+@media(max-width:860px){
+  nav,.bar>.btn{display:none} .burger{display:block}
+  .hero{grid-template-columns:1fr;padding-block:2.5rem 3rem}
+  .hero-media{order:-1}
+  .hero-media img{aspect-ratio:5/4;object-position:58% 22%}
+  .contact-grid{grid-template-columns:1fr}
+  .meta{grid-template-columns:1fr}
+  .meta div{border-right:0;border-bottom:1px solid var(--line);padding-right:0}
+  .meta div:last-child{border-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar wrap">
+    <a class="mark" href="#">Växjö Doula</a>
+    <nav>
+      <a href="#services">Tjänster</a>
+      <a href="#about">Om mig</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+    <a class="btn" href="#contact">Boka första möte</a>
+    <button class="burger" id="burger" aria-label="Meny" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div id="m-nav">
+    <a href="#services">Tjänster</a>
+    <a href="#about">Om mig</a>
+    <a href="#contact">Kontakt</a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <p class="tag">Förlossningförberedande stöd i Växjö med omnejd</p>
+      <h1 style="margin-top:1.1rem">Stöd, kunskap<br>&amp; <span>trygghet</span></h1>
+      <p class="lead">En doula är ett icke-medicinskt stöd innan, under och efter förlossningen.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Boka ett kostnadsfritt första möte</a>
+        <a class="btn btn-ghost" href="#services">Mina tjänster</a>
+      </div>
+      <div class="meta">
+        <div><strong>Växjö &amp; Värnamo</strong><span>Kronobergs län</span></div>
+        <div><strong>Karlskrona</strong><span>Blekinge län</span></div>
+        <div><strong>Kalmar</strong><span>Kalmar län</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="doula2.png" alt="Gravid kvinna i vit klänning som håller om sin mage">
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="center rv">
+        <p class="tag">Tjänster</p>
+        <h2>Mina tjänster</h2>
+        <p>Jag erbjuder olika former av stöd för att du ska känna dig trygg, informerad och stärkt.</p>
+      </div>
+      <div class="cards">
+        <article class="card rv">
+          <h3>Doulapaket</h3>
+          <p class="tag">Vad ingår?</p>
+          <ul>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Två förberedande samtal ca 1,5 timme var</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Jour en vecka innan beräknad födsel och två veckor efter</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Back-up doula</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Ett eftersamtal på ca 1,5 timme</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Möjligheten att kontakta mig per telefon eller mail under hela förloppet</li>
+          </ul>
+          <p class="note">Som doula har jag inget medicinskt ansvar, men är specialist på att vara ett stöd och en bro mellan de blivande föräldrarna och förlossningsvården.</p>
+        </article>
+        <article class="card rv">
+          <h3>Förlossningsförberedande</h3>
+          <p class="tag">Vad ingår?</p>
+          <ul>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Församtal 30 min</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Två förberedande samtal ca 1,5 timme var</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Förlossningsförberedelse med stöd av Föda utan rädsla</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Samtal om förlossningsbrev/önskemål</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Övningar &amp; knep inför förlossningen</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Amningsförberedelse vid behov</li>
+            <li><svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 5l4 4 8-8"/></svg>Friskvårdsbidrag kan nyttjas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid rv">
+      <div>
+        <p class="tag">Om mig</p>
+        <h2 style="margin-top:.9rem">Hej!</h2>
+      </div>
+      <div>
+        <p class="pull">Jag är utbildad beteendevetare, med huvudämne pyskologi. Jag brinner för feministiska frågor och förlossningsvården.</p>
+        <p>Jag heter Cassandra och är utbildad doula via Anna Tallwe (DinGravidcoach) och Emma Philipsson (Förlossningspodden) juni 2022. En doula är ett icke-medicinskt stöd innan, under och efter förlossningen. Som doula vill jag vara ett stöd för kvinnor som är mitt uppe i karrären, kvinnor som har eller inte har fött barn tidigare och kvinnor som tillsammans med partner önskar ha med ett stöd på sin/er förlossningsresa.</p>
+        <p>Jag stödjer den gravida och partner innan, under och efter förlossningen. Jag tar uppdrag i Växjö med omnejd; Förlossningen i Växjö, Värnamo, Karlskrona och Kalmar. Kontakta mig gärna för att boka en kostnadsfri konsultation där jag kan berätta mer.</p>
+        <p class="small">Förutom att doula arbetar jag på en statlig myndighet till vardags. Du kan läsa mer om vikten av att ha med en doula på förlossningen på <a href="https://www.1177.se/Kronoberg/barn--gravid/forlossning/forberedelser-infor-forlossningen/forlossningsradsla/" target="_blank" rel="noopener">1177.se</a></p>
+      </div>
+      <div class="about-media"><img src="bild.jpg" alt="Porträttbild på Cassandra"></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid rv">
+      <div>
+        <p class="tag">Kontakt</p>
+        <h2 style="margin-top:.9rem">Redo att ta nästa steg?</h2>
+        <p>Jag erbjuder alltid ett kostnadsfritt och förutsättningslöst första möte där vi kan lära känna varandra och ni kan ställa alla era frågor. Hör av er så bokar vi en tid!</p>
+
+        <style>
+          .contact-form{margin:1.75rem 0 0;display:grid;gap:.85rem;text-align:left}
+          .contact-form label{display:grid;gap:.35rem;font-size:.85rem;font-weight:600}
+          .contact-form input,.contact-form textarea{width:100%;padding:.8rem .95rem;border:1px solid rgba(0,0,0,.15);border-radius:10px;font:inherit;font-weight:400;background:#fff;color:#222;box-sizing:border-box}
+          .contact-form textarea{resize:vertical}
+          .contact-form button{justify-self:start;padding:.8rem 1.8rem;border:0;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;background:#2e2a26;color:#fff;transition:opacity .2s}
+          .contact-form button:hover{opacity:.85}
+          .contact-form button:disabled{opacity:.6;cursor:progress}
+          .contact-form .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+          .form-status{margin:.15rem 0 0;font-size:.92rem;min-height:1.2em;font-weight:600}
+          .form-status.ok{color:#1a7f37}
+          .form-status.err{color:#c0362c}
+        </style>
+        <form id="contact-form" class="contact-form" novalidate>
+          <label>Namn<input type="text" name="name" required autocomplete="name"></label>
+          <label>E-post<input type="email" name="email" required autocomplete="email"></label>
+          <label>Meddelande<textarea name="message" rows="4" required></textarea></label>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit">Skicka meddelande</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:cassandra@vaxjodoula.se">
+          <span><small>Mejla mig</small>cassandra@vaxjodoula.se</span>
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vaxjodoula/" target="_blank" rel="noopener">
+          <span><small>Instagram</small>vaxjodoula</span>
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; 2025 Växjö Doula — Alla rättigheter förbehållna.</span>
+    <a href="https://www.instagram.com/vaxjodoula/" target="_blank" rel="noopener">Instagram: vaxjodoula</a>
+  </div>
+</footer>
+
+<script>
+const b=document.getElementById('burger'),m=document.getElementById('m-nav');
+b.addEventListener('click',()=>{const o=m.style.display==='block';m.style.display=o?'none':'block';b.setAttribute('aria-expanded',String(!o))});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.style.display='none';b.setAttribute('aria-expanded','false')}));
+const revealAll=()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+if(!('IntersectionObserver' in window)){revealAll()}else{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  // failsafe: never leave content hidden if the observer never fires
+  setTimeout(revealAll,3000);
+}
+</script>
+<script src="/contact-form.js" defer></script>
+</body>
+</html>

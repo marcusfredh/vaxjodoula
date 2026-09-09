@@ -159,6 +159,30 @@
              <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-bold text-white mb-4">Redo att ta nästa steg?</h2>
                 <p class="text-lg text-white mb-8 max-w-2xl mx-auto">Jag erbjuder alltid ett kostnadsfritt och förutsättningslöst första möte där vi kan lära känna varandra och ni kan ställa alla era frågor. Hör av er så bokar vi en tid!</p>
+
+                <style>
+                  .contact-form{max-width:520px;margin:0 auto 2.5rem;display:grid;gap:.85rem;text-align:left}
+                  .contact-form label{display:grid;gap:.35rem;font-size:.9rem;font-weight:600;color:#fff}
+                  .contact-form input,.contact-form textarea{width:100%;padding:.8rem .95rem;border:1px solid rgba(0,0,0,.12);border-radius:10px;font:inherit;font-weight:400;background:#fff;color:#5C5552;box-sizing:border-box}
+                  .contact-form textarea{resize:vertical}
+                  .contact-form button{justify-self:center;padding:.8rem 2rem;border:0;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;background:#fff;color:#5C5552;box-shadow:0 10px 15px -3px rgba(0,0,0,.1);transition:transform .2s,box-shadow .2s}
+                  .contact-form button:hover{transform:translateY(-2px);box-shadow:0 20px 25px -5px rgba(0,0,0,.15)}
+                  .contact-form button:disabled{opacity:.65;cursor:progress;transform:none}
+                  .contact-form .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+                  .form-status{margin:.15rem 0 0;font-size:.95rem;min-height:1.2em;font-weight:600;text-align:center}
+                  .form-status.ok{color:#1f3d24}
+                  .form-status.err{color:#5a1a14}
+                </style>
+                <form id="contact-form" class="contact-form" novalidate>
+                  <label>Namn<input type="text" name="name" required autocomplete="name"></label>
+                  <label>E-post<input type="email" name="email" required autocomplete="email"></label>
+                  <label>Meddelande<textarea name="message" rows="4" required></textarea></label>
+                  <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+                  <button type="submit">Skicka meddelande</button>
+                  <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="text-white mb-4">Eller nå mig direkt:</p>
                  <a href="mailto:cassandra@vaxjodoula.se" class="inline-block bg-white text-primary-dark font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition mb-4 sm:mb-0 sm:mr-4">
                     Mejla mig: cassandra@vaxjodoula.se
                 </a>
@@ -200,6 +224,7 @@
             });
         }
     </script>
+    <script src="/contact-form.js" defer></script>
 
 </body>
 </html>
