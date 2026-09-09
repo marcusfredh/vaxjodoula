@@ -329,6 +329,48 @@ footer a:hover{color:var(--bone)}
     </div>
   </section>
 
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid rv">
+      <div>
+        <p class="tag">Kontakt</p>
+        <h2 style="margin-top:.9rem">Redo att ta nästa steg?</h2>
+        <p>Jag erbjuder alltid ett kostnadsfritt och förutsättningslöst första möte där vi kan lära känna varandra och ni kan ställa alla era frågor. Hör av er så bokar vi en tid!</p>
+
+        <style>
+          .contact-form{margin:1.75rem 0 0;display:grid;gap:.85rem;text-align:left}
+          .contact-form label{display:grid;gap:.35rem;font-size:.85rem;font-weight:600}
+          .contact-form input,.contact-form textarea{width:100%;padding:.8rem .95rem;border:1px solid rgba(0,0,0,.15);border-radius:10px;font:inherit;font-weight:400;background:#fff;color:#222;box-sizing:border-box}
+          .contact-form textarea{resize:vertical}
+          .contact-form button{justify-self:start;padding:.8rem 1.8rem;border:0;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;background:#2e2a26;color:#fff;transition:opacity .2s}
+          .contact-form button:hover{opacity:.85}
+          .contact-form button:disabled{opacity:.6;cursor:progress}
+          .contact-form .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+          .form-status{margin:.15rem 0 0;font-size:.92rem;min-height:1.2em;font-weight:600}
+          .form-status.ok{color:#1a7f37}
+          .form-status.err{color:#c0362c}
+        </style>
+        <form id="contact-form" class="contact-form" novalidate>
+          <label>Namn<input type="text" name="name" required autocomplete="name"></label>
+          <label>E-post<input type="email" name="email" required autocomplete="email"></label>
+          <label>Meddelande<textarea name="message" rows="4" required></textarea></label>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit">Skicka meddelande</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:cassandra@vaxjodoula.se">
+          <span><small>Mejla mig</small>cassandra@vaxjodoula.se</span>
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vaxjodoula/" target="_blank" rel="noopener">
+          <span><small>Instagram</small>vaxjodoula</span>
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="faq" id="faq">
     <div class="wrap">
       <div class="faq-head rv">
@@ -405,53 +447,11 @@ footer a:hover{color:var(--bone)}
       <div class="car-dots" id="faqDots" role="tablist" aria-label="Välj fråga"></div>
     </div>
   </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap contact-grid rv">
-      <div>
-        <p class="tag">Kontakt</p>
-        <h2 style="margin-top:.9rem">Redo att ta nästa steg?</h2>
-        <p>Jag erbjuder alltid ett kostnadsfritt och förutsättningslöst första möte där vi kan lära känna varandra och ni kan ställa alla era frågor. Hör av er så bokar vi en tid!</p>
-
-        <style>
-          .contact-form{margin:1.75rem 0 0;display:grid;gap:.85rem;text-align:left}
-          .contact-form label{display:grid;gap:.35rem;font-size:.85rem;font-weight:600}
-          .contact-form input,.contact-form textarea{width:100%;padding:.8rem .95rem;border:1px solid rgba(0,0,0,.15);border-radius:10px;font:inherit;font-weight:400;background:#fff;color:#222;box-sizing:border-box}
-          .contact-form textarea{resize:vertical}
-          .contact-form button{justify-self:start;padding:.8rem 1.8rem;border:0;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;background:#2e2a26;color:#fff;transition:opacity .2s}
-          .contact-form button:hover{opacity:.85}
-          .contact-form button:disabled{opacity:.6;cursor:progress}
-          .contact-form .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
-          .form-status{margin:.15rem 0 0;font-size:.92rem;min-height:1.2em;font-weight:600}
-          .form-status.ok{color:#1a7f37}
-          .form-status.err{color:#c0362c}
-        </style>
-        <form id="contact-form" class="contact-form" novalidate>
-          <label>Namn<input type="text" name="name" required autocomplete="name"></label>
-          <label>E-post<input type="email" name="email" required autocomplete="email"></label>
-          <label>Meddelande<textarea name="message" rows="4" required></textarea></label>
-          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit">Skicka meddelande</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:cassandra@vaxjodoula.se">
-          <span><small>Mejla mig</small>cassandra@vaxjodoula.se</span>
-          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
-        </a>
-        <a href="https://www.instagram.com/vaxjodoula/" target="_blank" rel="noopener">
-          <span><small>Instagram</small>vaxjodoula</span>
-          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <span>&copy; 2025 Växjö Doula — Alla rättigheter förbehållna.</span>
+    <span>&copy; <span id="yr">2026</span> Växjö Doula — Alla rättigheter förbehållna.</span>
     <a href="https://www.instagram.com/vaxjodoula/" target="_blank" rel="noopener">Instagram: vaxjodoula</a>
   </div>
 </footer>
@@ -467,6 +467,7 @@ if(!('IntersectionObserver' in window)){revealAll()}else{
   // failsafe: never leave content hidden if the observer never fires
   setTimeout(revealAll,3000);
 }
+var yrEl=document.getElementById('yr');if(yrEl)yrEl.textContent=new Date().getFullYear();
 </script>
 <script>
 (function(){
